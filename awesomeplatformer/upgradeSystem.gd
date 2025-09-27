@@ -12,6 +12,21 @@ var upgrades = { # houses value of current upgrades
 }
 var type = ["mana", "strength", "weapon"] # called when card has different type
 
+var upgrade_pool = {
+	"Weapon": [
+			{"name": "Sharpness", "sprite": preload("res://CardSystem/card design.svg"), "type": "attack", "value": 2},
+			{"name": "Rapid Fire", "sprite": preload("res://CardSystem/card design.svg"), "type": "attack_speed", "value": 1},
+	],
+	"Melee": [
+			{"name": "Iron Fists", "sprite": preload("res://CardSystem/card design.svg"), "type": "melee_damage", "value": 3},
+			{"name": "Spiked Armor", "sprite": preload("res://CardSystem/card design.svg"), "type": "thorns", "value": 1},
+	],
+	"Magic": [
+			{"name": "Fireball", "sprite": preload("res://CardSystem/card design.svg"), "type": "magic_damage", "value": 2}, # replace png with proper image
+			{"name": "Mana Surge", "sprite": preload("res://CardSystem/card design.svg"), "type": "mana", "value": 5},
+	]
+}
+
 func on_ready():
 	cardleft.disabled = true;
 	cardright.disabled = true;
@@ -34,5 +49,6 @@ func _on_card_left_chosen():
 func _on_card_right_chosen():
 	emit_signal("upgrade_chosen", upgrades["right"])
 	queue_free()
+	
 	
 	

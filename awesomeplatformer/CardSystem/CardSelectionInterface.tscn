@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://btjwip2bxw3d4"]
 
-[ext_resource type="Texture2D" uid="uid://chkdpg5l6icp3" path="res://CardSystem/card design.svg" id="1_3lsur"]
+[ext_resource type="Texture2D" uid="uid://chkdpg5l6icp3" path="res://assets/textures/card design.svg" id="1_3lsur"]
 
 [sub_resource type="Animation" id="Animation_rfweo"]
 resource_name = "cards come in"
