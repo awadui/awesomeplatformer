@@ -228,17 +228,17 @@ position = Vector2(-6, -38)
 script = ExtResource("1_4ntmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(6, -87)
+position = Vector2(11, -83)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -70)
+position = Vector2(5, -63)
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(6, -130)
-zoom = Vector2(0.75, 0.75)
+position = Vector2(7, -102)
+zoom = Vector2(0.65, 0.65)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

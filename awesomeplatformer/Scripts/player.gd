@@ -19,7 +19,24 @@ func _physics_process(delta):
 	var horizontal_direction = Input.get_axis("move_left", "move_right ")
 	
 	if horizontal_direction != 0:
-		sprite.flip_h = (horizontal_direction == -1)
+		switch_direction(horizontal_direction == -1)
 	
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
+	
+	update_animations(horizontal_direction)
+
+func update_animations(horizontal_direction): 
+	if is_on_floor():
+		if horizontal_direction == 0:
+			ap.play("idle")
+		else:
+			ap.play("run")
+	else: 
+		if velocity.y < 0:
+				ap.play("jump")
+		elif velocity.y > 0:
+			ap.play("jump")
+
+func switch_direction(horizontal_direction):
+	sprite.flip_h = (horizontal_direction == -1)
