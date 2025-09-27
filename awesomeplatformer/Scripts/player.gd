@@ -19,7 +19,7 @@ func _physics_process(delta):
 	var horizontal_direction = Input.get_axis("move_left", "move_right ")
 	
 	if horizontal_direction != 0:
-		switch_direction(horizontal_direction == -1)
+		switch_direction(horizontal_direction)
 	
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
