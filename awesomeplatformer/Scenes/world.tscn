@@ -10,11 +10,11 @@ size = Vector2(99, 100)
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_a02cp")]
-position = Vector2(560, 318)
+position = Vector2(140, 152)
 jump_force = 600
 
 [node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(559, 417)
+position = Vector2(161, 198)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
 scale = Vector2(100, 100)

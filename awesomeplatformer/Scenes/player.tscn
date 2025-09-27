@@ -1,20 +1,25 @@
 [gd_scene load_steps=4 format=3 uid="uid://rur7a3bnxgkm"]
 
 [ext_resource type="Script" uid="uid://cgnut7k3l0vn7" path="res://Scripts/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://c8crelrchilj2" path="res://icon.svg" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://dhckktw5v2q5r" path="res://assets/textures/idle.png" id="2_cvnsp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ntmi"]
-size = Vector2(60, 128)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 14.0
+height = 98.0
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(3, 2)
+position = Vector2(-6, -38)
 script = ExtResource("1_4ntmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-4, -67)
-scale = Vector2(0.4609375, 1)
-texture = ExtResource("1_l8h54")
+position = Vector2(11.999997, -105)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, -67)
-shape = SubResource("RectangleShape2D_4ntmi")
+position = Vector2(6, -89)
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(6, -130)
+zoom = Vector2(0.75, 0.75)
