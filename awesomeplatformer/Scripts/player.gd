@@ -6,8 +6,12 @@ extends CharacterBody2D
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var gm = get_node("/root/Main/GameManager")
 
-func _physics_process(delta):
+func _ready():
+	gm.connect("hitpoints_changed", Callable(self, "_on_hitpoints_changed"));
+	
+func _physics_process(_delta):
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 1000:
