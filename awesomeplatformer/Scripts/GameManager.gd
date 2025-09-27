@@ -12,6 +12,8 @@ var player_stats = {
 	"mana": 0,
 	"defense": 0,
 	"thorns": 0,
+	"poison": 0,
+	"blindness": 0
 }
 
 func apply_upgrade(upgrade: Dictionary):
