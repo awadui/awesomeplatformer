@@ -1,13 +1,15 @@
 extends Node2D
 
-func _ready() -> void:
+func _ready():
+	var card_manager = $CardManager
 	var player = $Player
-	var hud = $HUD   # HUD is the CanvasLayer
 
-	if not hud:
-		push_error("HUD node not found! Children: %s" % get_children())
-		return
+	card_manager.connect("card_played", Callable(player, "apply_buffs"))
 
-	hud.set_max_health(player.max_health)
-	hud.update_health(player.current_health)
-	player.health_changed.connect(Callable(hud, "update_health"))
+	# Example: create a test card
+	var frenzy = Card.new()
+	frenzy.name = "Frenzy"
+	frenzy.cost = 1
+	frenzy.buffs = {"attack": +2, "defense": -1}
+
+	card_manager.add_to_hand(frenzy)
