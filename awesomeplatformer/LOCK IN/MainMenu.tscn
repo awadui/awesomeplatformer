@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm6q3agrjls6j"]
 
-[ext_resource type="Script" uid="uid://cyqsc7luqr1wc" path="res://Project Beta 1/Scenes/intro_menu.gd" id="1_tv473"]
+[ext_resource type="PackedScene" uid="uid://trcoudytsls2" path="res://LOCK IN/Platforms/platform_1.tscn" id="2_ni54u"]
 [ext_resource type="Texture2D" uid="uid://cfwrdpnttgkvt" path="res://LOCK IN/assets/textures/sacrificium.svg" id="2_var32"]
 
 [sub_resource type="Animation" id="Animation_s5inj"]
@@ -47,7 +47,6 @@ offset_top = 47.000004
 offset_right = 171.0
 offset_bottom = 47.000004
 scale = Vector2(0.37044254, 0.3723543)
-script = ExtResource("1_tv473")
 
 [node name="Label" type="Sprite2D" parent="."]
 position = Vector2(1, 2)
@@ -66,3 +65,6 @@ offset_right = 304.19836
 offset_bottom = 305.6056
 scale = Vector2(1.274009, 1.1029775)
 text = "Click anywhere to start."
+
+[node name="Platform_1" parent="." instance=ExtResource("2_ni54u")]
+position = Vector2(-105, -95)
