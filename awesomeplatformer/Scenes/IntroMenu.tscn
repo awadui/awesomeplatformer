@@ -60,8 +60,9 @@ libraries = {
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = -388.0
-offset_top = -126.0
-offset_right = 421.0
-offset_bottom = 330.0
+offset_left = -504.80164
+offset_top = -150.39442
+offset_right = 304.19836
+offset_bottom = 305.6056
+scale = Vector2(1.274009, 1.1029775)
 text = "Click anywhere to start."
