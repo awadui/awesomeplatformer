@@ -1,12 +1,39 @@
 extends CharacterBody2D
+signal health_changed(new_health)
 
 @export var speed = 300
 @export var gravity = 30
 @export var jump_force = 300
+@export var max_health: int = 100
+@export var attack_power: int = 10
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var cshape = $CollisionShape2D
+
+var current_health: int
+
+func _ready():
+	current_health -= max_health;
+	
+func take_damage(amount: int):
+	current_health -= amount;
+	current_health = clamp(current_health,0,max_health)
+	# to update HUD, use update signal
+	emit_signal("health_changed", current_health)
+	redTint()
+	
+func attack(target):
+	if target.has.method("take damage"):
+		target.take_damage(attack_power)
+		
+func die():
+	queue_free()
+	
+func redTint():
+	sprite.modulate = Color(1, 0, 0)
+	await get_tree().create_timer(0.15).timeout
+	sprite.modulate = Color(01, 1, 1)
 
 var is_crouching = false
 

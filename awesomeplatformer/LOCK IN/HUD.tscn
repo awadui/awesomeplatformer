@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://donj7wa45ku11"]
+
+[ext_resource type="Script" uid="uid://d04ct8gkg3q4c" path="res://LOCK IN/progress_bar.gd" id="1_75xsn"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 317.0
+offset_top = 3.0
+offset_right = 357.0
+offset_bottom = 43.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+value = 60.0
+show_percentage = false
+script = ExtResource("1_75xsn")
