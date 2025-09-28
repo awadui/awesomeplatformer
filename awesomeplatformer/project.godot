@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="awesomeplatformer"
-run/main_scene="uid://wpd7wbrf66a2"
+run/main_scene="uid://dfmvehysxu36i"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

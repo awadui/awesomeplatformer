@@ -41,9 +41,6 @@ func redTint():
 
 var is_crouching = false
 
-var standing_cshape = preload("res://Project Beta 1/Resources/standing_cshape.tres")
-var crouching_cshape = preload("res://Project Beta 1/Resources/crouching_cshape.tres")
-
 func _physics_process(_delta):
 	if !is_on_floor():
 		velocity.y += gravity
@@ -53,7 +50,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
 	
-	var horizontal_direction = Input.get_axis("move_left", "move_right")
+	var horizontal_direction = Input.get_axis("move_left","move_right")
 	
 	if horizontal_direction != 0:
 		switch_direction(horizontal_direction)
@@ -94,11 +91,9 @@ func crouch():
 	if is_crouching:
 		return
 	is_crouching = true
-	cshape.shape = crouching_cshape
 	
 
 func stand_proud():
 	if is_crouching == false:
 		return
 	is_crouching = false
-	cshape.shape = standing_cshape

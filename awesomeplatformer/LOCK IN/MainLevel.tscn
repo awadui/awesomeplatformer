@@ -1,26 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfmvehysxu36i"]
+[gd_scene load_steps=9 format=3 uid="uid://dfmvehysxu36i"]
 
 [ext_resource type="PackedScene" uid="uid://8bmfnopyej53" path="res://LOCK IN/Player/player.tscn" id="1_8vxcw"]
 [ext_resource type="Script" uid="uid://cctho7kydb84" path="res://LOCK IN/main_level.gd" id="1_i81p3"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_i81p3"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4vk2"]
-size = Vector2(244, 24)
+[ext_resource type="PackedScene" uid="uid://bi6k1e0qwldsx" path="res://LOCK IN/Platforms/platform_5.tscn" id="3_r4vk2"]
+[ext_resource type="PackedScene" uid="uid://trcoudytsls2" path="res://LOCK IN/Platforms/platform_1.tscn" id="4_esu8w"]
+[ext_resource type="PackedScene" uid="uid://g24hqdv7hoqg" path="res://LOCK IN/Platforms/platform_2.tscn" id="5_q54u0"]
+[ext_resource type="PackedScene" uid="uid://b0et4butwd80x" path="res://LOCK IN/Platforms/platform_3.tscn" id="6_mhr8t"]
+[ext_resource type="PackedScene" uid="uid://3mngqq4gjc56" path="res://LOCK IN/Enemy/enemy.tscn" id="7_buvko"]
+[ext_resource type="PackedScene" uid="uid://c4dwntke61542" path="res://LOCK IN/NPC's/npc_2.tscn" id="8_mhr8t"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_i81p3")
 
-[node name="Platform" type="RigidBody2D" parent="."]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
-position = Vector2(175.80789, 160.68619)
-scale = Vector2(-244.28822, 24.259228)
-mesh = SubResource("QuadMesh_i81p3")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(176, 161)
-shape = SubResource("RectangleShape2D_r4vk2")
-
 [node name="Player" parent="." instance=ExtResource("1_8vxcw")]
 position = Vector2(147, 67)
+
+[node name="Platform_5" parent="." instance=ExtResource("3_r4vk2")]
+position = Vector2(203, 158)
+
+[node name="Platform_1" parent="." instance=ExtResource("4_esu8w")]
+position = Vector2(-136, 207)
+
+[node name="Platform_2" parent="." instance=ExtResource("5_q54u0")]
+position = Vector2(-475, 185)
+
+[node name="Platform_3" parent="." instance=ExtResource("6_mhr8t")]
+position = Vector2(-766, 140)
+
+[node name="Enemy" parent="Platform_3" instance=ExtResource("7_buvko")]
+position = Vector2(-44, -70)
+
+[node name="NPC" parent="." instance=ExtResource("8_mhr8t")]
+position = Vector2(-23, 82)
+script = null
