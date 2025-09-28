@@ -40,3 +40,4 @@ func update_animations(horizontal_direction):
 
 func switch_direction(horizontal_direction):
 	sprite.flip_h = (horizontal_direction == -1)
+	sprite.position.x = horizontal_direction * 4
