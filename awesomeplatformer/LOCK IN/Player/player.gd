@@ -2,7 +2,7 @@ extends CharacterBody2D
 signal health_changed(new_health)
 
 @export var speed = 300
-@export var gravity = 1000000000000000000000000000000000000000000
+@export var gravity = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 @export var jump_force = 300
 @export var max_health: int = 100
 @export var attack_power: int = 10
@@ -50,7 +50,7 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
 	
-	var horizontal_direction = Input.get_axis("move_left","move_right")
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
 	
 	if horizontal_direction != 0:
 		switch_direction(horizontal_direction)
