@@ -7,4 +7,4 @@ func _ready():
 
 func _on_start_pressed():
 	print("Start button pressed!")  # debug message
-	get_tree().change_scene_to_file("res://Scenes/level_one.tscn")
+	get_tree().change_scene_to_file("res://LOCK IN/MainLevel.tscn")
