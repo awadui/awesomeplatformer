@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnn66uvoiwgfv"]
+[gd_scene load_steps=6 format=3 uid="uid://cm6q3agrjls6j"]
 
 [ext_resource type="Script" uid="uid://cyqsc7luqr1wc" path="res://Project Beta 1/Scenes/intro_menu.gd" id="1_tv473"]
 [ext_resource type="Texture2D" uid="uid://cfwrdpnttgkvt" path="res://LOCK IN/assets/textures/sacrificium.svg" id="2_var32"]
