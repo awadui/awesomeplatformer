@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cxjg1b60iinlx"]
-
-[node name="UIfixed" type="CanvasLayer"]
-visible = false
-
-[node name="damage counter" type="Label" parent="."]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
