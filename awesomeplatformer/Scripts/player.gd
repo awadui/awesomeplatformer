@@ -10,28 +10,17 @@ extends CharacterBody2D
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var cshape = $CollisionShape2D
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 @onready var health_bar = $Scripts/UIFixed/HealthBar
 
 
 
 func update_health_bar():
 	health_bar.value = health
-=======
 @onready var attack_area = $AttackArea
->>>>>>> Stashed changes
-=======
 @onready var attack_area = $AttackArea
->>>>>>> Stashed changes
-=======
 @onready var attack_area = $AttackArea
->>>>>>> Stashed changes
-=======
 @onready var attack_area = $AttackArea
->>>>>>> Stashed changes
+@onready var attack_area = $AttackArea
 
 var is_crouching = false
 
