@@ -7,6 +7,10 @@ extends CharacterBody2D
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var cshape = $CollisionShape2D
+@onready var health_bar = $"../CanvasLayer/HealthBar"
+
+func update_health_bar():
+	health_bar.value = health
 
 var is_crouching = false
 
