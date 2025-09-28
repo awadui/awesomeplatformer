@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://8bmfnopyej53"]
+
+[ext_resource type="Script" uid="uid://c15vfmujdqhm1" path="res://LOCK IN/Player/player.gd" id="1_je6vl"]
+[ext_resource type="Texture2D" uid="uid://dhckktw5v2q5r" path="res://Project Beta 1/assets/textures/idle.png" id="2_4tqbv"]
+[ext_resource type="Shape2D" uid="uid://b6wdu0g1otybd" path="res://Project Beta 1/Resources/standing_cshape.tres" id="3_tx7vq"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_je6vl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -17)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_4tqbv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("3_tx7vq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
