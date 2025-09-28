@@ -6,8 +6,12 @@ extends CharacterBody2D
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var cshape = $CollisionShape2D
 
 var is_crouching = false
+
+var standing_cshape = preload("res://Resources/standing_cshape.tres")
+var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
 
 func _physics_process(_delta):
 	if !is_on_floor():
@@ -59,9 +63,11 @@ func crouch():
 	if is_crouching:
 		return
 	is_crouching = true
+	cshape.shape = crouching_cshape
 	
 
 func stand_proud():
 	if is_crouching == false:
 		return
 	is_crouching = false
+	cshape.shape = standing_cshape

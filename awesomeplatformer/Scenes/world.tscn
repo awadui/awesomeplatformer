@@ -16,7 +16,7 @@ size = Vector2(100, 100)
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_a02cp")]
-position = Vector2(109, 71)
+position = Vector2(107, 155)
 jump_force = 600
 
 [node name="Platform" type="StaticBody2D" parent="."]
@@ -56,7 +56,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_go701")
 
 [node name="Box" type="StaticBody2D" parent="."]
-position = Vector2(-332, 11)
+position = Vector2(-331, -2)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Box"]
 scale = Vector2(100, 100)
