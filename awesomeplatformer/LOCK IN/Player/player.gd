@@ -10,8 +10,8 @@ extends CharacterBody2D
 
 var is_crouching = false
 
-var standing_cshape = preload("res://Resources/standing_cshape.tres")
-var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
+var standing_cshape = preload("res://Project Beta 1/Resources/crouching_cshape.tres")
+var crouching_cshape = preload("res://Project Beta 1/Resources/standing_cshape.tres")
 
 func _physics_process(_delta):
 	if !is_on_floor():
