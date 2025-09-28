@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var patrol_distance: float = 200.0 
 @export var pause_time: float = 2.0        
 
+var health: int
 var direction: int = 1
 var start_position: Vector2
 var moving: bool = true
@@ -38,3 +39,12 @@ func _pause_and_turn():
 func _on_pause_timeout():
 	direction *= -1 
 	moving = true
+
+func take_damage(amount: int):
+	health -= amount
+	sprite.modulate = Color.RED   # flash red
+	await get_tree().create_timer(0.2).timeout
+	sprite.modulate = Color.WHITE
+
+	if health <= 0:
+		queue_free()

@@ -10,8 +10,8 @@ height = 116.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0kj"]
 size = Vector2(37, 8)
 
-[sub_resource type="Animation" id="Animation_287tu"]
-resource_name = "idle_enemy"
+[sub_resource type="Animation" id="Animation_0830c"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,8 +61,8 @@ tracks/3/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_0830c"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_287tu"]
+resource_name = "idle_enemy"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
