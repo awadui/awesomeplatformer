@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dia88c36ccib8" path="res://LOCK IN/assets/textures/Platform_5.png" id="1_hkbd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t347u"]
-size = Vector2(313, 47)
+size = Vector2(151, 47)
 
 [node name="Platform_5" type="RigidBody2D"]
 
@@ -11,5 +11,5 @@ size = Vector2(313, 47)
 texture = ExtResource("1_hkbd3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15.5, 1.5)
+position = Vector2(-65.5, 1.5)
 shape = SubResource("RectangleShape2D_t347u")
