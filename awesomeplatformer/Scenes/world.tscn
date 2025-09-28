@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bghvjmrb6tdgw"]
+[gd_scene load_steps=5 format=3 uid="uid://bghvjmrb6tdgw"]
 
 [ext_resource type="PackedScene" uid="uid://rur7a3bnxgkm" path="res://Scenes/player.tscn" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://bvvxidrk286my" path="res://Scenes/enemy.tscn" id="2_go701"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_a02cp"]
 
@@ -34,3 +35,6 @@ mesh = SubResource("QuadMesh_a02cp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_go701")
+
+[node name="Enemy" parent="." instance=ExtResource("2_go701")]
+position = Vector2(476, -81)
