@@ -9,6 +9,8 @@ extends CharacterBody2D
 @onready var cshape = $CollisionShape2D
 @onready var health_bar = $Scripts/UIFixed/HealthBar
 
+
+
 func update_health_bar():
 	health_bar.value = health
 
@@ -82,6 +84,24 @@ var health = max_health; # will change later on
 var invinc = false;
 var invinc_time = 0.5; # half second of invincibility
 
+# init variables to receive buffs
+var attack = 10
+var melee = 5
+var magic = 0
+var ranged = 1
+
+func apply_upgrade(stat: String, amount: int):
+	match stat:
+		"attack":
+			attack += amount
+		"melee":
+			melee += amount
+		"magic":
+			magic += amount
+		"range":
+			ranged += amount
+			
+			
 func flash_red():
 	sprite.modulate = Color(1, 0.3, 0.3)  # reddish tint
 	await get_tree().create_timer(0.2).timeout

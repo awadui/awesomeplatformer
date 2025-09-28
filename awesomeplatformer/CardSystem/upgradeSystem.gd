@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 signal upgrade_chosen(upgrade_type)
 
@@ -14,12 +14,12 @@ var type = ["mana", "melee", "weapon"] # called when card has different type
 
 var upgrade_pool = { # ADD ALL NEW CARDS + BUFFS HERE!!
 	"Weapon": [
-			{"name": "Sharpness III", "sprite": preload("res://assets/textures/card-sharpness.png"), "type": type[2], "value": 2},
-			{"name": "Rapid Fire", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
+			{"name": "Sharpness III", "sprite": preload("res://assets/textures/card-sharpness.png"), "type": {"attack": 5}},
+			{"name": "Rapid Fire", "sprite": preload("res://CardSystem/card design.svg"), "type": {"attack": 5}},
 			{"name": "Spiked Armor", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
 	],
 	"Melee": [
-			{"name": "Iron Fists", "sprite": preload("res://assets/textures/card-gauntlets.png"), "type": type[1], "value": 3},
+			{"name": "Iron Fists", "sprite": preload("res://assets/textures/card-gauntlets.png"), "type": {"attack": 5}},
 			{"name": "Serious Table Flip", "sprite": preload("res://CardSystem/card design.svg"), "type": type[1], "value": 3}
 	],
 	"Magic": [
@@ -29,6 +29,9 @@ var upgrade_pool = { # ADD ALL NEW CARDS + BUFFS HERE!!
 }
 
 var current_chosen_upgrades = {} # stores the current upgrade on left and right cards.
+var left_choice
+var right_choice
+var player_ref
 
 func on_ready(): # Stalls card logic until anim finishes
 	cardleft.disabled = true;
@@ -44,7 +47,39 @@ func _on_intro_finished(anim_name):
 	if anim_name == "intro":
 		cardleft.disabled = false
 		cardright.disabled = false
-		
+
+func show_cards(player):
+	player_ref = player
+	# Pick two random categories
+	var categories = upgrades.keys()
+	left_choice = upgrades[categories[randi() % categories.size()]].pick_random()
+	right_choice = upgrades[categories[randi() % categories.size()]].pick_random()
+
+	# Set textures
+	card_left.texture = left_choice["texture"]
+	card_right.texture = right_choice["texture"]
+
+	# Play animation
+	visible = true
+	anim.play("cards_slide_in")
+
+func _on_CardLeft_gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		apply_upgrade(left_choice)
+		hide_cards()
+
+func _on_CardRight_gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		apply_upgrade(right_choice)
+		hide_cards()
+
+func apply_upgrade(upgrade):
+	for key in upgrade["effect"].keys():
+		player_ref.apply_upgrade(key, upgrade["effect"][key])
+
+func hide_cards():
+	visible = false
+	
 func _on_card_left_chosen():
 	emit_signal("upgrade_chosen", upgrades["left"])
 	queue_free() # remove interface after choice
