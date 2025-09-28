@@ -23,6 +23,9 @@ func take_damage(amount: int):
 	emit_signal("health_changed", current_health)
 	redTint()
 	
+	if current_health <= 0:
+		die()
+	
 func attack(target):
 	if target.has.method("take damage"):
 		target.take_damage(attack_power)
@@ -30,8 +33,6 @@ func attack(target):
 func die():
 	queue_free()
 
-if current_health <= 0:
-	die()
 	
 func redTint():
 	sprite.modulate = Color(1, 0, 0)
@@ -40,8 +41,8 @@ func redTint():
 
 var is_crouching = false
 
-var standing_cshape = preload("res://Project Beta 1/Resources/crouching_cshape.tres")
-var crouching_cshape = preload("res://Project Beta 1/Resources/standing_cshape.tres")
+var standing_cshape = preload("res://Project Beta 1/Resources/standing_cshape.tres")
+var crouching_cshape = preload("res://Project Beta 1/Resources/crouching_cshape.tres")
 
 func _physics_process(_delta):
 	if !is_on_floor():
@@ -49,10 +50,10 @@ func _physics_process(_delta):
 		if velocity.y > 1000:
 			velocity.y = 1000
 	
-	if Input.is_action_just_pressed("jump"): #&& is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
 	
-	var horizontal_direction = Input.get_axis("move_left", "move_right ")
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
 	
 	if horizontal_direction != 0:
 		switch_direction(horizontal_direction)
