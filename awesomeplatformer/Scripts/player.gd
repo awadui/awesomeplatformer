@@ -6,20 +6,6 @@ extends CharacterBody2D
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
-@onready var gm = get_node("/root/Main/GameManager")
-
-func _ready():
-	gm.connect("hitpoints_changed", Callable(self, "on_hitpoints_changed"));
-	
-func on_hitpoints_changed(current, max):
-	print([current, max])
-	# Change to UI health bar!!!
-
-func take_damage(amount: int):
-	var reduced = max(amount - gm.player_stats["defense"], 0)
-	gm.player_stats["current_hp"] -= reduced
-	gm.player_stats["current_hp"] = max(gm.player_stats["current_hp"], 0)
-	gm.emit_signal("hitpoints_changed", gm.player_stats["current_hp"], gm.player_stats["max_hp"])
 
 func _physics_process(_delta):
 	if !is_on_floor():

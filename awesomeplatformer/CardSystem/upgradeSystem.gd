@@ -14,7 +14,7 @@ var type = ["mana", "melee", "weapon"] # called when card has different type
 
 var upgrade_pool = { # ADD ALL NEW CARDS + BUFFS HERE!!
 	"Weapon": [
-			{"name": "Sharpness", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 2},
+			{"name": "Sharpness III", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 2},
 			{"name": "Rapid Fire", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
 			{"name": "Spiked Armor", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
 	],
