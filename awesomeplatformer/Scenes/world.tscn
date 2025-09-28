@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bghvjmrb6tdgw"]
 
 [ext_resource type="PackedScene" uid="uid://rur7a3bnxgkm" path="res://Scenes/player.tscn" id="1_a02cp"]
-[ext_resource type="PackedScene" uid="uid://bvvxidrk286my" path="res://Scenes/enemy.tscn" id="2_go701"]
+[ext_resource type="PackedScene" path="res://Scenes/enemy.tscn" id="2_go701"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_a02cp"]
 

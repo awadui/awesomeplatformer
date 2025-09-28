@@ -158,8 +158,7 @@ _data = {
 &"cards come in": SubResource("Animation_rfweo")
 }
 
-[node name="CardSelectionInterface" type="Node2D"]
-position = Vector2(-2, 4)
+[node name="CardSelectionInterface" type="CanvasLayer"]
 
 [node name="CardLeft" type="Sprite2D" parent="."]
 position = Vector2(-13, -1)
