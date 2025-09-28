@@ -283,8 +283,13 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_4tqbv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD:awesomeplatformer/LOCK IN/Player/player.tscn
 position = Vector2(-2, 5)
 shape = SubResource("CapsuleShape2D_tx7vq")
+=======
+position = Vector2(6, -63)
+shape = ExtResource("3_x3wgy")
+>>>>>>> parent of a8c89f6 (enemy suf):awesomeplatformer/Scenes/player.tscn
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
