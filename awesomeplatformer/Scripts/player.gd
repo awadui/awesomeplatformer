@@ -2,17 +2,24 @@ extends CharacterBody2D
 
 @export var speed = 300
 @export var gravity = 30
+@export var fall_limit_y: float = 1000.0
+@export var spawn_point: NodePath
 @export var jump_force = 300
+@export var attack_damage = 1
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var cshape = $CollisionShape2D
+<<<<<<< Updated upstream
 @onready var health_bar = $Scripts/UIFixed/HealthBar
 
 
 
 func update_health_bar():
 	health_bar.value = health
+=======
+@onready var attack_area = $AttackArea
+>>>>>>> Stashed changes
 
 var is_crouching = false
 
@@ -26,7 +33,10 @@ func _physics_process(_delta):
 		if velocity.y > 1000:
 			velocity.y = 1000
 	
-	if Input.is_action_just_pressed("jump"): #&& is_on_floor():
+	if Input.is_action_just_pressed("Attack"):
+		attack()
+	
+	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 	
 	var horizontal_direction = Input.get_axis("move_left", "move_right ")
@@ -38,7 +48,7 @@ func _physics_process(_delta):
 		crouch()
 	elif Input.is_action_just_released("crouch"):
 		stand_proud()
-	
+		
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
 	
@@ -111,3 +121,9 @@ func i_am_invincible():
 	invinc = true;
 	await get_tree().create_timer(invinc_time).timeout
 	invinc = false
+	
+func attack():
+	for body in attack_area.get_overlapping_bodies():
+		if body.has_method("take_damage"):
+			body.take_damage(attack_damage)
+			

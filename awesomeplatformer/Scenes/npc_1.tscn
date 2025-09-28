@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://4vi5wnnyjmw4"]
+
+[ext_resource type="Texture2D" uid="uid://cdgor3fj823bc" path="res://assets/textures/npc_1.png" id="1_lpqb4"]
+[ext_resource type="Script" uid="uid://dpej35aphmco" path="res://Scenes/npc_1.gd" id="1_wp5kv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5kv"]
+size = Vector2(182, 140)
+
+[node name="NPC" type="Area2D"]
+script = ExtResource("1_wp5kv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+position = Vector2(1, -71)
+shape = SubResource("RectangleShape2D_wp5kv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -54.000004)
+scale = Vector2(0.1847575, 0.19941507)
+texture = ExtResource("1_lpqb4")
+
+[node name="InteractLabel" type="Label" parent="."]
+offset_left = -68.0
+offset_top = -133.0
+offset_right = 72.0
+offset_bottom = -110.0
+text = "Press E to interact"
+
+[node name="MessagePanel" type="PanelContainer" parent="."]
+offset_left = -137.0
+offset_top = -142.0
+offset_right = 170.0
+offset_bottom = -102.0
+
+[node name="MessageLabel" type="Label" parent="MessagePanel"]
+layout_mode = 2
+text = "DO NOT BE  A CONCLUSION MERCHANT"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

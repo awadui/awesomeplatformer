@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://rur7a3bnxgkm"]
+[gd_scene load_steps=14 format=3 uid="uid://rur7a3bnxgkm"]
 
 [ext_resource type="Script" uid="uid://cgnut7k3l0vn7" path="res://Scripts/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://dhckktw5v2q5r" path="res://assets/textures/idle.png" id="2_cvnsp"]
@@ -264,9 +264,13 @@ tracks/3/keys = {
 "values": [ExtResource("3_6t5aa")]
 }
 
+[sub_resource type="Animation" id="Animation_3smsa"]
+resource_name = "attack"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgqql"]
 _data = {
 &"RESET": SubResource("Animation_6t5aa"),
+&"attack": SubResource("Animation_3smsa"),
 &"crouch": SubResource("Animation_x3wgy"),
 &"idle": SubResource("Animation_cvnsp"),
 &"jump": SubResource("Animation_fkybt"),
