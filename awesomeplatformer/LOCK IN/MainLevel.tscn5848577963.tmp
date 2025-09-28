@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfmvehysxu36i"]
+
+[ext_resource type="PackedScene" uid="uid://8bmfnopyej53" path="res://LOCK IN/Player/player.tscn" id="1_8vxcw"]
+[ext_resource type="Script" uid="uid://cctho7kydb84" path="res://LOCK IN/main_level.gd" id="1_i81p3"]
+[ext_resource type="PackedScene" uid="uid://bi6k1e0qwldsx" path="res://LOCK IN/Platforms/platform_5.tscn" id="3_r4vk2"]
+[ext_resource type="PackedScene" uid="uid://trcoudytsls2" path="res://LOCK IN/Platforms/platform_1.tscn" id="4_esu8w"]
+[ext_resource type="PackedScene" uid="uid://g24hqdv7hoqg" path="res://LOCK IN/Platforms/platform_2.tscn" id="5_q54u0"]
+[ext_resource type="PackedScene" uid="uid://b0et4butwd80x" path="res://LOCK IN/Platforms/platform_3.tscn" id="6_mhr8t"]
+[ext_resource type="PackedScene" uid="uid://3mngqq4gjc56" path="res://LOCK IN/Enemy/enemy.tscn" id="7_buvko"]
+[ext_resource type="PackedScene" uid="uid://c4dwntke61542" path="res://LOCK IN/NPC's/npc_2.tscn" id="8_mhr8t"]
+
+[node name="MainLevel" type="Node2D"]
+script = ExtResource("1_i81p3")
+
+[node name="Player" parent="." instance=ExtResource("1_8vxcw")]
+position = Vector2(198, 66)
+
+[node name="Platform_5" parent="." instance=ExtResource("3_r4vk2")]
+position = Vector2(190, 158)
+
+[node name="Platform_5" parent="Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(-315, -153)
+
+[node name="Platform_5" parent="Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(-313, -2)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(190, 158)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(-188, -205)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(245, 3)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(245, 3)
+gravity_scale = 0.1
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(-322, -41)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(-295, -10)
+
+[node name="Platform_5" parent="Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5/Platform_5" instance=ExtResource("3_r4vk2")]
+position = Vector2(439, 45)
+
+[node name="Platform_1" parent="." instance=ExtResource("4_esu8w")]
+position = Vector2(-108, 195)
+
+[node name="Platform_2" parent="." instance=ExtResource("5_q54u0")]
+position = Vector2(-429, 170)
+
+[node name="Platform_3" parent="." instance=ExtResource("6_mhr8t")]
+position = Vector2(-656, 118)
+
+[node name="NPC" parent="." instance=ExtResource("8_mhr8t")]
+position = Vector2(-23, 82)
+script = null
+
+[node name="Enemy" parent="." instance=ExtResource("7_buvko")]
+position = Vector2(-505, 56)

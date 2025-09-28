@@ -1,65 +1,33 @@
 extends CharacterBody2D
-signal health_changed(new_health)
 
 @export var speed = 300
-@export var gravity = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-@export var jump_force = 300
-@export var max_health: int = 100
-@export var attack_power: int = 10
+@export var gravity = 30
+@export var jump_force = 1000
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var cshape = $CollisionShape2D
 
-var current_health: int
-
-func _ready():
-	current_health = max_health;
-	
-func take_damage(amount: int):
-	current_health -= amount;
-	current_health = clamp(current_health,0,max_health)
-	# to update HUD, use update signal
-	emit_signal("health_changed", current_health)
-	redTint()
-	
-	if current_health <= 0:
-		die()
-	
-func attack(target):
-	if target.has.method("take damage"):
-		target.take_damage(attack_power)
-		
-func die():
-	queue_free()
-
-	
-func redTint():
-	sprite.modulate = Color(1, 0, 0)
-	await get_tree().create_timer(0.15).timeout
-	sprite.modulate = Color(01, 1, 1)
-
 var is_crouching = false
 
-func _physics_process(_delta):
+func _physics_process(delta: float) -> void:
 	if !is_on_floor():
 		velocity.y += gravity
-		if velocity.y > 1000:
-			velocity.y = 1000
-	
+		velocity.y = min(velocity.y, 500000)
+
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
-	
+
 	var horizontal_direction = Input.get_axis("move_left", "move_right")
-	
+
 	if horizontal_direction != 0:
 		switch_direction(horizontal_direction)
-	
+
 	if Input.is_action_just_pressed("crouch"):
 		crouch()
 	elif Input.is_action_just_released("crouch"):
 		stand_proud()
-	
+
 	velocity.x = speed * horizontal_direction
 	move_and_slide()
 	
