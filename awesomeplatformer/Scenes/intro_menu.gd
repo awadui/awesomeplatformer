@@ -4,8 +4,7 @@ extends Control
 
 func _ready():
 	start_button.connect("pressed", Callable(self, "_on_start_pressed"))
-	
-func on_start_pressed():
-	var main_scene = preload("res://Scenes/world.tscn").instantiate()
-	get_tree().root.add_child(main_scene)
-	queue_free()
+
+func _on_start_pressed():
+	print("Start button pressed!")  # debug message
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")

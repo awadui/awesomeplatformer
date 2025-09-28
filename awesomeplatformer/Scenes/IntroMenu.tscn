@@ -39,7 +39,14 @@ _data = {
 &"title text": SubResource("Animation_spxyf")
 }
 
-[node name="IntroMenu" type="Node2D"]
+[node name="IntroMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 171.0
+offset_top = 47.000004
+offset_right = 171.0
+offset_bottom = 47.000004
+scale = Vector2(0.37044254, 0.3723543)
 script = ExtResource("1_spxyf")
 
 [node name="Label" type="Sprite2D" parent="."]
@@ -52,6 +59,7 @@ libraries = {
 }
 
 [node name="StartButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = -388.0
 offset_top = -126.0
 offset_right = 421.0
