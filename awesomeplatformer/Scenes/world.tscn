@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bghvjmrb6tdgw"]
+[gd_scene load_steps=7 format=3 uid="uid://bghvjmrb6tdgw"]
 
 [ext_resource type="PackedScene" uid="uid://rur7a3bnxgkm" path="res://Scenes/player.tscn" id="1_a02cp"]
 [ext_resource type="PackedScene" uid="uid://bvvxidrk286my" path="res://Scenes/enemy.tscn" id="2_go701"]
@@ -7,6 +7,11 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
 size = Vector2(500, 51)
+
+[sub_resource type="QuadMesh" id="QuadMesh_go701"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5a7ea"]
+size = Vector2(100, 100)
 
 [node name="world" type="Node2D"]
 
@@ -38,3 +43,24 @@ shape = SubResource("RectangleShape2D_go701")
 
 [node name="Enemy" parent="." instance=ExtResource("2_go701")]
 position = Vector2(476, -81)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(-335, 144)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
+scale = Vector2(500, 50)
+mesh = SubResource("QuadMesh_a02cp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_go701")
+
+[node name="Box" type="StaticBody2D" parent="."]
+position = Vector2(-332, 11)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Box"]
+scale = Vector2(100, 100)
+mesh = SubResource("QuadMesh_go701")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
+shape = SubResource("RectangleShape2D_5a7ea")
