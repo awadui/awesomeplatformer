@@ -58,6 +58,9 @@ tracks/3/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_3smsa"]
+resource_name = "attack"
+
 [sub_resource type="Animation" id="Animation_x3wgy"]
 resource_name = "crouch"
 tracks/0/type = "value"
@@ -264,9 +267,6 @@ tracks/3/keys = {
 "values": [ExtResource("3_6t5aa")]
 }
 
-[sub_resource type="Animation" id="Animation_3smsa"]
-resource_name = "attack"
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgqql"]
 _data = {
 &"RESET": SubResource("Animation_6t5aa"),
@@ -287,6 +287,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
 position = Vector2(5, -66)
 shape = ExtResource("3_x3wgy")
 

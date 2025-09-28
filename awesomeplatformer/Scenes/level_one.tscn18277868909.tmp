@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://crocvpl871pje"]
+
+[ext_resource type="PackedScene" uid="uid://rur7a3bnxgkm" path="res://Scenes/player.tscn" id="1_lvfns"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_sojq8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hi7j2"]
+size = Vector2(400, 51)
+
+[node name="LevelOne" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_lvfns")]
+position = Vector2(54, 170)
+
+[node name="Platform" type="Area2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
+position = Vector2(83.999985, 192)
+scale = Vector2(400, 50)
+mesh = SubResource("QuadMesh_sojq8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(84, 192.5)
+shape = SubResource("RectangleShape2D_hi7j2")

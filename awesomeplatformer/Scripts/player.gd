@@ -17,10 +17,6 @@ extends CharacterBody2D
 func update_health_bar():
 	health_bar.value = health
 @onready var attack_area = $AttackArea
-@onready var attack_area = $AttackArea
-@onready var attack_area = $AttackArea
-@onready var attack_area = $AttackArea
-@onready var attack_area = $AttackArea
 
 var is_crouching = false
 
@@ -33,9 +29,6 @@ func _physics_process(_delta):
 		velocity.y += gravity
 		if velocity.y > 1000:
 			velocity.y = 1000
-	
-	if Input.is_action_just_pressed("Attack"):
-		attack()
 	
 	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
@@ -123,8 +116,3 @@ func i_am_invincible():
 	await get_tree().create_timer(invinc_time).timeout
 	invinc = false
 	
-func attack():
-	for body in attack_area.get_overlapping_bodies():
-		if body.has_method("take_damage"):
-			body.take_damage(attack_damage)
-			
