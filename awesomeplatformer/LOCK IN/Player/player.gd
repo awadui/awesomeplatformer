@@ -29,6 +29,9 @@ func attack(target):
 		
 func die():
 	queue_free()
+
+if current_health <= 0:
+	die()
 	
 func redTint():
 	sprite.modulate = Color(1, 0, 0)
