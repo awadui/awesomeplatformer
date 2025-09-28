@@ -20,3 +20,8 @@ offset_bottom = 27.0
 value = 60.0
 show_percentage = false
 script = ExtResource("1_75xsn")
+
+[node name="HealthText" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
