@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0nx8ieidj1vu"
-path="res://.godot/imported/card-fireball.png-3ba603262e278a4a182f34deeef02f2e.ctex"
+path="res://.godot/imported/card-fireball.png-41e01d49186ee98696a9d071e9acf45c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/card-fireball.png"
-dest_files=["res://.godot/imported/card-fireball.png-3ba603262e278a4a182f34deeef02f2e.ctex"]
+source_file="res://LOCK IN/assets/textures/card-fireball.png"
+dest_files=["res://.godot/imported/card-fireball.png-41e01d49186ee98696a9d071e9acf45c.ctex"]
 
 [params]
 

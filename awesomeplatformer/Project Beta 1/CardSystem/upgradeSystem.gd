@@ -9,13 +9,13 @@ signal upgrade_chosen(upgrade_data)
 # Define upgrade pool
 var upgrade_pool = {
 	"Weapon": [
-		{"name": "Sharpness III", "sprite": preload("res://assets/textures/card-sharpness.png"), "effect": {"attack": 5}},
+		{"name": "Sharpness III", "sprite": preload("res://LOCK IN/assets/textures/card-sharpness.png"), "effect": {"attack": 5}},
 	],
 	"Melee": [
-		{"name": "Iron Fists", "sprite": preload("res://assets/textures/card-gauntlets.png"), "effect": {"attack": 5}},
+		{"name": "Iron Fists", "sprite": preload("res://LOCK IN/assets/textures/card-gauntlets.png"), "effect": {"attack": 5}},
 	],
 	"Magic": [
-		{"name": "Fireball", "sprite": preload("res://assets/textures/card-fireball.png"), "effect": {"magic": 2}},
+		{"name": "Fireball", "sprite": preload("res://LOCK IN/assets/textures/card-fireball.png"), "effect": {"magic": 2}},
 	]
 }
 

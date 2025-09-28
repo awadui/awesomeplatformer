@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dou7pa6umfx03"
-path="res://.godot/imported/BACKGROYD.png-56417bcca833a79cd7e11b3d752276e6.ctex"
+uid="uid://cdgor3fj823bc"
+path="res://.godot/imported/npc_1.png-5ffc204e7c4737d87a9c932773f27d81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/BACKGROYD.png"
-dest_files=["res://.godot/imported/BACKGROYD.png-56417bcca833a79cd7e11b3d752276e6.ctex"]
+source_file="res://LOCK IN/assets/textures/npc_1.png"
+dest_files=["res://.godot/imported/npc_1.png-5ffc204e7c4737d87a9c932773f27d81.ctex"]
 
 [params]
 

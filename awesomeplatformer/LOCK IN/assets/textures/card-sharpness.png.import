@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4pgegle8xedh"
-path="res://.godot/imported/Paralax Background.png-7b903a6be9900d07aa6c1a78e62917f3.ctex"
+uid="uid://vpp7sn7gt57i"
+path="res://.godot/imported/card-sharpness.png-5099a21cba99af647711c7bd4da547e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/Paralax Background.png"
-dest_files=["res://.godot/imported/Paralax Background.png-7b903a6be9900d07aa6c1a78e62917f3.ctex"]
+source_file="res://LOCK IN/assets/textures/card-sharpness.png"
+dest_files=["res://.godot/imported/card-sharpness.png-5099a21cba99af647711c7bd4da547e8.ctex"]
 
 [params]
 

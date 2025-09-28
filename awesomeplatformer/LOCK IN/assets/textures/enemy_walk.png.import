@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4toxhg1leuqw"
-path="res://.godot/imported/enemy_idle.png-6a386a8ca4c58fa09f671b259eb4d9c4.ctex"
+uid="uid://c524pqps0ctr8"
+path="res://.godot/imported/enemy_walk.png-8a5946597f5afed76a9df43ca185e9fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/enemy_idle.png"
-dest_files=["res://.godot/imported/enemy_idle.png-6a386a8ca4c58fa09f671b259eb4d9c4.ctex"]
+source_file="res://LOCK IN/assets/textures/enemy_walk.png"
+dest_files=["res://.godot/imported/enemy_walk.png-8a5946597f5afed76a9df43ca185e9fc.ctex"]
 
 [params]
 

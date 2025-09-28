@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm27anto3vl5v"
-path="res://.godot/imported/crouch.png-5aad034d951878b371429d2d41a09bea.ctex"
+uid="uid://cfwrdpnttgkvt"
+path="res://.godot/imported/sacrificium.svg-388cf53da7e799a000210e4374c90735.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/crouch.png"
-dest_files=["res://.godot/imported/crouch.png-5aad034d951878b371429d2d41a09bea.ctex"]
+source_file="res://LOCK IN/assets/textures/sacrificium.svg"
+dest_files=["res://.godot/imported/sacrificium.svg-388cf53da7e799a000210e4374c90735.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

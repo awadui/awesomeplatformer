@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdgor3fj823bc"
-path="res://.godot/imported/npc_1.png-f291cf7d39d0a8e1fbe5d2909880fc0f.ctex"
+uid="uid://dhckktw5v2q5r"
+path="res://.godot/imported/idle.png-e3a689459553b125e86d6f2cbad35e16.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/npc_1.png"
-dest_files=["res://.godot/imported/npc_1.png-f291cf7d39d0a8e1fbe5d2909880fc0f.ctex"]
+source_file="res://LOCK IN/assets/textures/idle.png"
+dest_files=["res://.godot/imported/idle.png-e3a689459553b125e86d6f2cbad35e16.ctex"]
 
 [params]
 

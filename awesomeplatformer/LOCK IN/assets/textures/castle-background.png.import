@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr55san0lpfmk"
-path="res://.godot/imported/pixil-frame-0.png-f8beb6725f2116bf1a16ab515ed9f3cd.ctex"
+uid="uid://dou7pa6umfx03"
+path="res://.godot/imported/castle-background.png-eec37111ed1dc5c9d6192aa415eb9b38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-f8beb6725f2116bf1a16ab515ed9f3cd.ctex"]
+source_file="res://LOCK IN/assets/textures/castle-background.png"
+dest_files=["res://.godot/imported/castle-background.png-eec37111ed1dc5c9d6192aa415eb9b38.ctex"]
 
 [params]
 

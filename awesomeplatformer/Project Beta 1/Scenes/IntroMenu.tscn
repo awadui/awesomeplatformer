@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://wpd7wbrf66a2"]
 
-[ext_resource type="Texture2D" uid="uid://cfwrdpnttgkvt" path="res://Project Beta 1/assets/textures/sacrificium.svg" id="1_4tuak"]
+[ext_resource type="Texture2D" uid="uid://cfwrdpnttgkvt" path="res://LOCK IN/assets/textures/sacrificium.svg" id="1_4tuak"]
 [ext_resource type="Script" uid="uid://cyqsc7luqr1wc" path="res://Project Beta 1/Scenes/intro_menu.gd" id="1_spxyf"]
 
 [sub_resource type="Animation" id="Animation_s5inj"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg3nn1ftlry50"
-path="res://.godot/imported/nose.png-4014ae302c58e19976898ce5a1526425.ctex"
+uid="uid://b4pgegle8xedh"
+path="res://.godot/imported/Paralax Background.png-48d56622167ca7c1b00c4e10048ddb7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/nose.png"
-dest_files=["res://.godot/imported/nose.png-4014ae302c58e19976898ce5a1526425.ctex"]
+source_file="res://LOCK IN/assets/textures/Paralax Background.png"
+dest_files=["res://.godot/imported/Paralax Background.png-48d56622167ca7c1b00c4e10048ddb7b.ctex"]
 
 [params]
 

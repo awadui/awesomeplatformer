@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b446tsrru24mw"
-path="res://.godot/imported/card-gauntlets.png-b222d4e8cce0dccf461e095044f52981.ctex"
+uid="uid://bevy43cvmy7xh"
+path="res://.godot/imported/run.png-2f9a29d9efe0bfa64608fc7d9afaf769.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/card-gauntlets.png"
-dest_files=["res://.godot/imported/card-gauntlets.png-b222d4e8cce0dccf461e095044f52981.ctex"]
+source_file="res://LOCK IN/assets/textures/run.png"
+dest_files=["res://.godot/imported/run.png-2f9a29d9efe0bfa64608fc7d9afaf769.ctex"]
 
 [params]
 

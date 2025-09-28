@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfwrdpnttgkvt"
-path="res://.godot/imported/sacrificium.svg-1c5023303f2aa6c42eb38dbab934a055.ctex"
+uid="uid://dr55san0lpfmk"
+path="res://.godot/imported/pixil-frame-0.png-968b1e480b911f0ed23287cc6b348057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Beta 1/assets/textures/sacrificium.svg"
-dest_files=["res://.godot/imported/sacrificium.svg-1c5023303f2aa6c42eb38dbab934a055.ctex"]
+source_file="res://LOCK IN/assets/textures/pixil-frame-0.png"
+dest_files=["res://.godot/imported/pixil-frame-0.png-968b1e480b911f0ed23287cc6b348057.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
