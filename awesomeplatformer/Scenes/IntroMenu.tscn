@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://wpd7wbrf66a2"]
+[gd_scene load_steps=5 format=3 uid="uid://wpd7wbrf66a2"]
+
+[ext_resource type="Texture2D" uid="uid://cfwrdpnttgkvt" path="res://assets/textures/sacrificium.svg" id="1_4tuak"]
+
+[sub_resource type="Animation" id="Animation_spxyf"]
+resource_name = "title text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.138, 1.062), Vector2(1.001, 0.97300005)]
+}
+
+[sub_resource type="Animation" id="Animation_s5inj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0t3ux"]
+_data = {
+&"RESET": SubResource("Animation_s5inj"),
+&"title text": SubResource("Animation_spxyf")
+}
 
 [node name="IntroMenu" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 2)
+texture = ExtResource("1_4tuak")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0t3ux")
+}
