@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://trcoudytsls2" path="res://LOCK IN/Platforms/platform_1.tscn" id="4_esu8w"]
 [ext_resource type="PackedScene" uid="uid://g24hqdv7hoqg" path="res://LOCK IN/Platforms/platform_2.tscn" id="5_q54u0"]
 [ext_resource type="PackedScene" uid="uid://b0et4butwd80x" path="res://LOCK IN/Platforms/platform_3.tscn" id="6_mhr8t"]
-[ext_resource type="PackedScene" uid="uid://3mngqq4gjc56" path="res://LOCK IN/Enemy/enemy.tscn" id="7_buvko"]
-[ext_resource type="PackedScene" uid="uid://c4dwntke61542" path="res://LOCK IN/NPC's/npc_2.tscn" id="8_mhr8t"]
+[ext_resource type="PackedScene" uid="uid://bvvxidrk286my" path="res://LOCK IN/Enemy/enemy.tscn" id="7_buvko"]
+[ext_resource type="PackedScene" path="res://LOCK IN/NPC's/npc_2.tscn" id="8_mhr8t"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_i81p3")
@@ -19,16 +19,17 @@ position = Vector2(147, 67)
 position = Vector2(203, 158)
 
 [node name="Platform_1" parent="." instance=ExtResource("4_esu8w")]
-position = Vector2(-136, 207)
+position = Vector2(-102, 200)
 
 [node name="Platform_2" parent="." instance=ExtResource("5_q54u0")]
-position = Vector2(-475, 185)
+position = Vector2(-435, 182)
 
 [node name="Platform_3" parent="." instance=ExtResource("6_mhr8t")]
-position = Vector2(-766, 140)
+position = Vector2(-717, 135)
 
 [node name="Enemy" parent="Platform_3" instance=ExtResource("7_buvko")]
-position = Vector2(-44, -70)
+position = Vector2(-108, -45)
+max_health = -310
 
 [node name="NPC" parent="." instance=ExtResource("8_mhr8t")]
 position = Vector2(-23, 82)

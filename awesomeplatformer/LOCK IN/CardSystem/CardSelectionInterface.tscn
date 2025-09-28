@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://btjwip2bxw3d4"]
 
-[ext_resource type="Texture2D" uid="uid://chkdpg5l6icp3" path="res://CardSystem/card design.svg" id="1_3lsur"]
-[ext_resource type="Script" uid="uid://c03sx3x1yxh5u" path="res://CardSystem/cardAnimation.gd" id="2_rfweo"]
+[ext_resource type="Texture2D" uid="uid://chkdpg5l6icp3" path="res://LOCK IN/CardSystem/card design.svg" id="1_3lsur"]
+[ext_resource type="Script" uid="uid://c03sx3x1yxh5u" path="res://LOCK IN/CardSystem/cardAnimation.gd" id="2_rfweo"]
 
 [sub_resource type="Animation" id="Animation_vwadj"]
 length = 0.001

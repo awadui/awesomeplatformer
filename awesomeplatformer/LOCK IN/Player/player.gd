@@ -2,7 +2,7 @@ extends CharacterBody2D
 signal health_changed(new_health)
 
 @export var speed = 300
-@export var gravity = 30
+@export var gravity = 1000000000000000000000000000000000000000000
 @export var jump_force = 300
 @export var max_health: int = 100
 @export var attack_power: int = 10
@@ -14,7 +14,7 @@ signal health_changed(new_health)
 var current_health: int
 
 func _ready():
-	current_health -= max_health;
+	current_health = max_health;
 	
 func take_damage(amount: int):
 	current_health -= amount;
