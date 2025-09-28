@@ -14,16 +14,16 @@ var type = ["mana", "melee", "weapon"] # called when card has different type
 
 var upgrade_pool = { # ADD ALL NEW CARDS + BUFFS HERE!!
 	"Weapon": [
-			{"name": "Sharpness III", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 2},
+			{"name": "Sharpness III", "sprite": preload("res://assets/textures/card-sharpness.png"), "type": type[2], "value": 2},
 			{"name": "Rapid Fire", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
 			{"name": "Spiked Armor", "sprite": preload("res://CardSystem/card design.svg"), "type": type[2], "value": 1},
 	],
 	"Melee": [
-			{"name": "Iron Fists", "sprite": preload("res://CardSystem/card design.svg"), "type": type[1], "value": 3},
+			{"name": "Iron Fists", "sprite": preload("res://assets/textures/card-gauntlets.png"), "type": type[1], "value": 3},
 			{"name": "Serious Table Flip", "sprite": preload("res://CardSystem/card design.svg"), "type": type[1], "value": 3}
 	],
 	"Magic": [
-			{"name": "Fireball", "sprite": preload("res://CardSystem/card design.svg"), "type": type[0], "value": 2}, # replace png with proper image
+			{"name": "Fireball", "sprite": preload("res://assets/textures/card-fireball.png"), "type": type[0], "value": 2}, # replace png with proper image
 			{"name": "Shadow Orb", "sprite": preload("res://CardSystem/card design.svg"), "type": type[0], "value": 5},
 	]
 }

@@ -50,7 +50,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(871.00006, -386.99997)]
+"values": [Vector2(268, 89.99999)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -62,7 +62,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [1.5546839]
+"values": [0.0005455017]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -74,7 +74,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.6402603, 0.5671991)]
+"values": [Vector2(0.44952786, 0.41455212)]
 }
 
 [sub_resource type="Animation" id="Animation_rfweo"]
@@ -86,10 +86,10 @@ tracks/0/path = NodePath("CardLeft:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.56666666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-447, -395), Vector2(1.0000007, -3.0000002)]
+"values": [Vector2(-98, -76), Vector2(94, 83.99999), Vector2(94, 83.99999), Vector2(90.00001, 89)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -98,10 +98,10 @@ tracks/1/path = NodePath("CardLeft:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.56666666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [1.5712967, -0.010990351]
+"values": [1.569959, 0.0005455017, 0.0005455017, 0.0005455017]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -110,10 +110,10 @@ tracks/2/path = NodePath("CardLeft:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.56666666),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.5189651, 0.462374), Vector2(1.2658662, 1.0548357)]
+"values": [Vector2(0.15131338, 0.16827643), Vector2(0.46417624, 0.38757002), Vector2(0.5111231, 0.41461664), Vector2(0.44952786, 0.41455212)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -122,10 +122,10 @@ tracks/3/path = NodePath("CardRight:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(871.00006, -386.99997), Vector2(497, 0.9999695)]
+"values": [Vector2(417.99997, -77), Vector2(263, 86), Vector2(268.00003, 83.00001), Vector2(268, 89.99999)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -134,10 +134,10 @@ tracks/4/path = NodePath("CardRight:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.5666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [1.5546839, 3.1379473]
+"values": [1.5736952, 0.0005455017, 0.0005455017, 0.0005455017]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -146,10 +146,10 @@ tracks/5/path = NodePath("CardRight:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.70000005),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0.6402603, 0.5671991), Vector2(1.2286015, 1.0770764)]
+"values": [Vector2(0.10224779, 0.16315678), Vector2(0.47946554, 0.38880736), Vector2(0.52009165, 0.42919984), Vector2(0.44952786, 0.41455212)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o4dno"]
@@ -167,9 +167,9 @@ scale = Vector2(0.5189651, 0.462374)
 texture = ExtResource("1_3lsur")
 
 [node name="CardRight" type="Sprite2D" parent="."]
-position = Vector2(871.00006, -386.99997)
-rotation = 1.5546839
-scale = Vector2(0.6402603, 0.5671991)
+position = Vector2(268, 89.99999)
+rotation = 0.0005455017
+scale = Vector2(0.44952786, 0.41455212)
 texture = ExtResource("1_3lsur")
 
 [node name="intro" type="AnimationPlayer" parent="."]

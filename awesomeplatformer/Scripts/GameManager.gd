@@ -11,8 +11,6 @@ var player_stats = {
 	"magic_power": 1,
 	"mana": 0,
 	"defense": 0,
-	"thorns": 0,
-	"poison": 0,
 	"blindness": 0
 }
 
