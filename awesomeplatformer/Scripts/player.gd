@@ -10,6 +10,7 @@ extends CharacterBody2D
 
 var is_crouching = false
 
+
 var standing_cshape = preload("res://Resources/standing_cshape.tres")
 var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
 
@@ -71,3 +72,18 @@ func stand_proud():
 		return
 	is_crouching = false
 	cshape.shape = standing_cshape
+
+var max_health = 100;
+var health = max_health; # will change later on
+var invinc = false;
+var invinc_time = 0.5; # half second of invincibility
+
+func flash_red():
+	sprite.modulate = Color(1, 0.3, 0.3)  # reddish tint
+	await get_tree().create_timer(0.2).timeout
+	sprite.modulate = Color(1, 1, 1)  # back to normal
+
+func i_am_invincible():
+	invinc = true;
+	await get_tree().create_timer(invinc_time).timeout
+	invinc = false
