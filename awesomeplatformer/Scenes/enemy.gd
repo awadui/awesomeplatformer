@@ -17,7 +17,7 @@ func _ready():
 	pause_timer.wait_time = pause_time
 	pause_timer.connect("timeout", Callable(self, "_on_pause_timeout"))
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if moving:
 		velocity.x = direction * speed
 		move_and_slide()
