@@ -6,5 +6,5 @@ func _ready():
 	start_button.connect("pressed", Callable(self, "_on_start_pressed"))
 
 func _on_start_pressed():
-	print("Start button  hard pressed!")  # debug message
+	print("Start button pressed!")  # debug message
 	get_tree().change_scene_to_file("res://Scenes/world.tscn")
