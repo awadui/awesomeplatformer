@@ -1,76 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://bghvjmrb6tdgw"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_a02cp"]
+[ext_resource type="Script" uid="uid://cwiida8yn5qjj" path="res://health_bar.gd" id="1_a02cp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_go701"]
-size = Vector2(500, 51)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_02rjj"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_go701"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr2w7"]
+bg_color = Color(0.40715307, 0.654152, 0.6247292, 1)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5a7ea"]
-size = Vector2(100, 100)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmmlw"]
+bg_color = Color(0.16206557, 0.1620656, 0.16206548, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_color = Color(0, 0, 0, 0.27450982)
+shadow_offset = Vector2(0, 1)
 
-[node name="world" type="Node2D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4oyk"]
+bg_color = Color(1, 0.011764706, 0.27450982, 1)
 
-[node name="NPC" parent="." instance=ExtResource("3_5a7ea")]
-position = Vector2(334, 139)
+[node name="UIfixed" type="CanvasLayer"]
 
-[node name="Player" parent="." instance=ExtResource("1_a02cp")]
-position = Vector2(107, 155)
-jump_force = 600
+[node name="HealthBar" type="ProgressBar" parent="."]
+z_index = 1
+offset_left = 292.0
+offset_top = 1.0
+offset_right = 332.0
+offset_bottom = 41.0
+scale = Vector2(1.695, 0.3)
+theme_override_styles/background = SubResource("StyleBoxEmpty_02rjj")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wr2w7")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_a02cp")
 
-[node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(221, 163)
+[node name="DamageBar" type="ProgressBar" parent="HealthBar"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_mmmlw")
+theme_override_styles/fill = SubResource("StyleBoxFlat_k4oyk")
+value = 80.0
+show_percentage = false
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
-scale = Vector2(500, 50)
-mesh = SubResource("QuadMesh_a02cp")
+[node name="Timer" type="Timer" parent="HealthBar"]
+wait_time = 0.4
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_go701")
-
-[node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(744, 93)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
-scale = Vector2(500, 50)
-mesh = SubResource("QuadMesh_a02cp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_go701")
-
-[node name="Enemy" parent="." instance=ExtResource("2_go701")]
-position = Vector2(476, -81)
-
-[node name="Platform3" type="StaticBody2D" parent="."]
-position = Vector2(-335, 144)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
-scale = Vector2(500, 50)
-mesh = SubResource("QuadMesh_a02cp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_go701")
-
-[node name="Box" type="StaticBody2D" parent="."]
-position = Vector2(-331, -2)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Box"]
-scale = Vector2(100, 100)
-mesh = SubResource("QuadMesh_go701")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
-shape = SubResource("RectangleShape2D_5a7ea")
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(450, 900)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(-100, -138)
-scale = Vector2(0.73333335, 0.611111)
-texture = ExtResource("4_8j60k")
-centered = false
+[node name="damage counter" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
